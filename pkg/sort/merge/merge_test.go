@@ -1,4 +1,4 @@
-package insertion
+package merge
 
 import (
 	"algorithm/pkg/sort"
@@ -6,18 +6,18 @@ import (
 	"testing"
 )
 
-func TestInsertion_SortAsc(t *testing.T) {
-	arr := []int{5, 1, 15, 3, 4, 3, 6, 0, 2, 1}
-	i := New(arr)
-	i.SortAsc()
-	fmt.Println(i.GetArr())
-	fmt.Println(sort.IsAscSorted(i.Array))
-}
-
-func TestInsertion_SortDesc(t *testing.T) {
+func TestMerge_SortDesc(t *testing.T) {
 	arr := []int{5, 1, 15, 3, 4, 3, 6, 0, 2, 1}
 	i := New(arr)
 	i.SortDesc()
 	fmt.Println(i.GetArr())
 	fmt.Println(sort.IsDescSorted(i.Array))
+}
+
+func TestMerge_SortAsc(t *testing.T) {
+	arr := []int{5, 1, 15, 3, 4, 3, 6, 0, 2, 1}
+	i := New(arr)
+	i.SortAsc()
+	fmt.Println(i.GetArr())
+	fmt.Println(sort.IsAscSorted(i.Array))
 }
